@@ -1,22 +1,49 @@
+/*FEWD 42 | Lesson 02 | Matt Schaefer | Homework
+
+Recreation of my personal site that was previously built using Squarespace. 
+I wanted to see if I could match the structure and style of my existing webiste while incorporating bits learned from lesson 1 and 2. http://www.mattschaeferdesign.com/*/
+
 body {
 	background-color: #FFFFFF;
-	color: #000000;
+	color: #323232;
+	font-family: "Source Code Pro", Regular;
+	font-size: 11px;
+	margin-top: 5em;
+	margin-bottom: 5em; 
+	margin-left: 5em;
+	margin-right: 5em;
+}
+div {
+	float: right;
+	margin-left: 5em;
 }
 h1 {
 	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	padding-bottom:33px; 
 }
-h2 {
+h2, h3 {
 	text-align: left;
-}
-h3 {
-	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
 }
 p {
 	text-align: left;
+	font-weight: normal;
 }
-p2 {
-	
+em {
+	font-style: italic;
 }
-<a href= "Resume/Resume.html">Resume</a> {
-	text-align: left;
+
+hr {
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+<img src="../Gifs/PixelPortrait_Resume.gif" alt="Pixel Portrait Resume"> {
+	margin-top: 5em;
+	margin-bottom: 5em; 
+	margin-left: 5em;
+	margin-right: 5em;
 }
