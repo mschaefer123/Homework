@@ -1,63 +1,161 @@
-html {
-	background: #D2D2D2;
-	font-family: source code pro; /*Does this show up on github if the .ttf/.otf is saved locally on my desktop?*/
-	font-family: 'lato'; /*How to select lato 300?*/
-	font-style: '300';
+/*FEWD 42 | Lesson 04 | Matt Schaefer | Homework | travel blog
+*/
 
+/*------------------------------------------
+BASE STYLES
+--------------------------------------------*/
+* {
+	box-sizing: border-box; /*need to refer to notes again as to how this works*/
+	font-family: 'lato';
+	font-weight: 300;
 }
 
 body {
 	background: white;
-	margin: 0px 90px 0px 90px;
-	padding: 25px 40px 25px 40px;
-	color: #000000;
-	font-family:  
+	padding: 60px
 }
 
-nav>a {
+p {
 	font-size: 18px;
-	text-decoration: underline;
-	padding-right: 12px;
-	color: #D2D2D2;
-
+	color: #888888;
 }
 
-h1 {
-	font-size: 45px;
-	color: #F9D483;
+img {
+	max-width: 100%;
 }
 
-h1>a {
+hr {  
+	clear: both; 
+	max-width: 100%;
+	border-top: 1px solid #D2D2D2;
+	margin: 30px 0px 30px 0px;
+}
+
+/*------------------------------------------
+HEADER STYLES
+--------------------------------------------*/
+header nav {
+  clear: both;
+  max-width: 100%;
+  padding: 30px 0px 30px 0px; 
+}
+
+header nav a {
+  display: inline-block;
+  width: 16%;
+  font-size: 18px;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px;
+  border: 1px solid #D2D2D2;
+  background-color: #D2D2D2; /*does this only work if there is a border added? would not work for me with just the background-color: style*/
+}
+
+header h1 a {
+	float: left;
 	font-size: 60px;
 	color: #F9D483;
 	text-decoration: none;
+	display: block; 
 }
 
-h2 {
-
+header h2 {          /*yet to figure out how to get this to visually align with "header h1 a". will continue Monday.*/
+	display: inline;
+	font size : 30px;
+	font-weight: 300;
+	color: #888888;
+	
 }
 
-strong {
-	font-size: 72; /*Needs work*/
-	color: #D2D2D2;
-	padding: 0px 6px 6px 0px;
+/*------------------------------------------
+SECTION STYLES
+--------------------------------------------*/
+section {
+	float: left;
+	width: 65%;
 }
 
-h3 {
+section article {
+	padding: 30px 0px 30px 0px;
+}
+
+article p::first-letter { /*::first-letter selector for drop caps*/
+   color:#D2D2D2;
+   float:left;
+   line-height: 75%;
+   padding: 0px 12px 12px 0px;
+   font-size:110px;
+}
+
+section article h2 a {  
+	font-size: 30px;
+	color: black;
+	text-decoration: none;
+}
+
+section h3 {
 	font-size: 30px;
 	color: #D2D2D2;
-	padding-top: 25px;
-
+	margin: 0px;
+	padding-top: 30px 0px 30px 0px
 }
 
-h4 a {
+section h4 a {
+	color: #F9D483;
+	font-weight: 700;
+	text-decoration: none;
+	float: right; 
+}
+
+/*------------------------------------------
+SIDEBAR STYLES
+--------------------------------------------*/
+aside {
+	float: left;
+	width: 35%;
+	padding: 60px;
+	color: #888888;
+}
+
+aside h4 {
+	font-weight: 700;
+	color: #888888;
+}
+
+aside .more a {
+	float: right;
+	font-weight: 700;
 	color: #F9D483;
 	text-decoration: none;
-	text-align: right; /*not working*/
+	padding: 30px 0px 30px 0px;
+}
+
+aside li a {
+	list-style: circle solid #888888;
+	font-size: 18px;
+	color: #F9D483;
+	text-decoration: none;
+}
+
+/*------------------------------------------
+FOOTER STYLES
+--------------------------------------------*/
+footer {
+	clear: both;
+	font-size: 18px;
+	color: #D2D2D2;
+	padding-top: 30px;
+}
+
+footer a {
+	color: #F9D483;
+	text-decoration: none;
 }
 
 #copyright {
-	font-size: 12px;
+	font-size: 18px;
 	color: #D2D2D2;
 	padding-top: 12px;
 }
