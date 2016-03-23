@@ -7,13 +7,15 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400|Merriweather:700,700italic|Oswald:700' rel='stylesheet' type='text/css'>
 
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header>
+  <header class='clearfix'> 
+  <!-- if parent is not showing up then its collapsed so use clearfix -->
     <h1><a href="#">Startup Matchmaker</a></h1>
     <nav>
       <ul>
@@ -27,7 +29,7 @@
   </header>
 
   <p class="tagline">Because two heads are better than one.</p>
-  <section class="banner">
+  <section class="banner clearfix" >
     <div class="blurb">
       <h2>Meet your Match!</h2>
       <p>Have a great idea for a product, but need help making it a reality? We’re here to help. Startup Matchmaker is the best place for designers and developers to find each other.</p>
