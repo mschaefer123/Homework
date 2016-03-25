@@ -45,9 +45,7 @@ a {
 
 /* Layout (columns, floats, etc.)
    ================================================================ */
-hr {
 
-}
 
 /* Header
    ================================================================ */
@@ -85,14 +83,18 @@ header nav ul li strong {
   font-size: 25px;
   clear: both;
   text-align: center;
+  background-color: #E2EBE6;
+  box-shadow: 0px 3px #D4E1DB; 
 }
 
-/* Section
+/* Banner
    ================================================================ */
 .banner {
   background-image: url("../images/coworking.jpg");
-  background-size: ;
-  max-width: 100%;
+  background-position: center; 
+  background-size: cover;
+  background-repeat:no-repeat; 
+  padding: 30px;
 }
 
 .blurb {
@@ -101,21 +103,24 @@ header nav ul li strong {
   width: 33.3333%;
 }
 
+
+/* Section
+   ================================================================ */
 .info {
   display: inline-block;
   float: left;
-  border: 0px 1px 0px 0px;
-  border-color: #D4E1DB;
-  padding: 30px;
+  padding: 20px;
+  box-shadow: 1px 0px #D4E1DB;
   width: 33.3333%;
 }
+
 
 /* Footer
    ================================================================ */
 footer {
+  clear: both;
   background: #3C3A3A;
   padding: 15px;
-  max-width: 100%;
 }
 
 footer p { 
@@ -123,10 +128,37 @@ footer p {
   color: white;
 }
 
-/* Navigation
-   ================================================================ */
-
-
 
 /* Buttons
    ================================================================ */
+.button {
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: 'oswald';
+}
+
+
+.banner .button {
+  background-color: #F4473C;
+  color: white;
+  display: inline-block;
+  box-shadow: 0px 3px #C33830;
+  /*max-height: 30px; how to keep buttons the same size?*/
+}
+
+/*.banner .button:hover {  drop height and remover drop shadow
+
+}*/
+
+.info .button {
+  background-color: #E2EBE6;
+  color: black;
+  display: inline-block;
+  box-shadow: 0px 3px #B3BBB7;
+}
+
+.banner .button:hover
+ {
+  box-shadow: none;
+}
