@@ -1,126 +1,170 @@
+/*FEWD 42 | Lesson 06 | Matt Schaefer | Homework*/
+
 /* ==========================================================================
    Global Overrides
-  ========================================================================== */
-* {
-  box-sizing: border-box;
-/*   border: 1px solid red; */
-}
+   ========================================================================== */
+   * {
+    box-sizing: border-box;
+    /*   border: 1px solid red; */
+    font-family: 'Source Sans Pro';
+  }
 
-.clearfix:after {
-  display: table;
-  clear: both;
-  content: "";
-}
+  .clearfix:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
 
 /* ==========================================================================
    Author's custom styles
-  ========================================================================== */
+   ========================================================================== */
 
 /* 
     SITE COLORS for your reference:
     (refer to styleguide.jpg for hex codes or use Sip to pick colors from design)
 
-    White - #ffffff;
-    Light Grey -
-    Dark Grey -
-    Grey/Black(text color) -
-    Yellow -
-    Red -
-*/
+    White - #ffffff
+    Light Grey Banner - #E2EBE6
+    Light Grey Hover - #eef3f0
+    Dark Grey - #3C3A3A
+    Grey/Black(text color) - #000000
+    Yellow - #FAD400
+    Red - #F4473C
+    Red Hover - #F0240D
+    */
 
 
 /* Global
-   ================================================================ */
-body {
-  /* Set some defaults! font-family, font-size, color, etc. */
-  padding: 30px;
-  font-family: 'Source+Sans+pro';
-}
+================================================================ */
+/*body {}*/
+/* Set some defaults! font-family, font-size, color, etc. */
+
 
 /* Text Styles (a, a:hover, a:visited, a:active, p, h1, h2, h3, h4, etc.)
-   ================================================================ */
-a {
-  /* Set some default styles for anchors (color, text decoration) */
+================================================================ */
+
+/* Set some default styles for anchors (color, text decoration) */
+
+p {
+  font-size: 20px;
+}
+
+strong {
+  text-transform: uppercase;
 }
 
 /* Layout (columns, floats, etc.)
-   ================================================================ */
+================================================================ */
 
 
 /* Header
-   ================================================================ */
+================================================================ */
 header {
   background: #3C3A3A;
-  max-width: 100%;
-  padding-top: 15px;
+  padding: 18px 18px 18px 40px;
+  box-shadow: 0px 4px #FAD400;
 }
 
-header h1 a {
+h1 {
+  margin: 0;
+}
+
+h1 a {
   font-family: 'Merriweather';
-  font-style: 400;
   font-size: 30px;
   color: white;
   text-decoration: none;
   float: left;
   display: inline-block;
+
 }
 
-header nav ul li a {
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
+h1 a:hover {
+  color: #FAD400;
+}
+
+/*mystery margin being created and this is the fix*/
+ul {
+  margin: 0; 
   float: right;
+}
+
+/*cant figure out why these are not centered vertically*/
+li {          
+  float: left;
+  padding: 0 15px 0 15px;
   display: inline-block;
 }
 
-header nav ul li strong {
+li a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
 
+li a:hover {
+  color: #FAD400;
 }
 
 .tagline {
   font-family: 'Merriweather';
+  margin: 4px 0 0 0;
+  padding: 25px;
   font-style: italic;
   font-size: 25px;
   clear: both;
   text-align: center;
   background-color: #E2EBE6;
-  box-shadow: 0px 3px #D4E1DB; 
+  box-shadow: 0px 2px 1px #D4E1DB; 
 }
 
 /* Banner
-   ================================================================ */
+================================================================ */
 .banner {
   background-image: url("../images/coworking.jpg");
   background-position: center; 
   background-size: cover;
   background-repeat:no-repeat; 
   padding: 30px;
+  box-shadow: inset 0 0 3px #3C3A3A;
 }
 
 .blurb {
   display: inline-block;
   float: right;
-  width: 33.3333%;
+  width: 40%;
+  padding: 40px;
+  background-color: rgba(255,255,255,0.6);
+  box-shadow: 0 0 3px #3C3A3A;
 }
 
 
 /* Section
-   ================================================================ */
+================================================================ */
 .info {
   display: inline-block;
   float: left;
-  padding: 20px;
+  margin: 30px 0 50px 0;
+  padding: 10px 30px 10px 30px;
   box-shadow: 1px 0px #D4E1DB;
   width: 33.3333%;
 }
 
+h3 {
+  font-family: 'Merriweather';
+  font-size: 25px;
+}
+
+section p {
+  padding: 0 0 30px 0;
+}
 
 /* Footer
-   ================================================================ */
+================================================================ */
 footer {
   clear: both;
   background: #3C3A3A;
-  padding: 15px;
+  padding: 8px 8px 8px 40px;
 }
 
 footer p { 
@@ -130,26 +174,30 @@ footer p {
 
 
 /* Buttons
-   ================================================================ */
+================================================================ */
 .button {
-  padding: 20px;
-  text-decoration: none;
+  width: 100%;
+  padding: 15px;
+  margin: 0;     /*mystery margin being created and this is the fix*/
   border-radius: 5px;
   font-family: 'oswald';
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
 }
-
 
 .banner .button {
   background-color: #F4473C;
   color: white;
   display: inline-block;
   box-shadow: 0px 3px #C33830;
-  /*max-height: 30px; how to keep buttons the same size?*/
 }
 
-/*.banner .button:hover {  drop height and remover drop shadow
-
-}*/
+/*will continue to explore ways to make the button appear to press in when :hover*/
+.banner .button:hover {
+  background-color: #F0240D;
+} 
 
 .info .button {
   background-color: #E2EBE6;
@@ -158,7 +206,8 @@ footer p {
   box-shadow: 0px 3px #B3BBB7;
 }
 
-.banner .button:hover
- {
-  box-shadow: none;
+/*will continue to explore ways to make the button appear to press in when :hover*/
+.info .button:hover {
+  background-color: #eef3f0;
 }
+
