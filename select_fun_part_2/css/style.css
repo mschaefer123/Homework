@@ -115,3 +115,17 @@ footer {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+.newclass { 
+     border-color: purple;
+     border-style: dashed;
+}
+
+.unique {
+     color: red;
+     background-color: yellow;
+}
+
+.spanstyle {
+     color: blue;
+     background-color: orange;
+}
