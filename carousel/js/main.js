@@ -3,6 +3,11 @@ var images = ["images/image_1.jpg", "images/image_2.jpg", "images/image_3.jpg", 
 
 // Set a var for our currentPosition
 var currentPosition = 0;
+// Set a var for our currentVote. Thought about just using var currentPositon but added a unique var for organizational purposes
+var currentVote = 0;
+// Convert currentVote into a number
+currentVote = parseFloat(currentVote);
+
 
 // User clicks "next" button
 $('#next').on('click', function () {
@@ -10,21 +15,49 @@ $('#next').on('click', function () {
 	// add one to the currentPosition
 	currentPosition = currentPosition + 1;
 	
-	//if current position is the last image 
-	if (currentPosition === images.length - 1) {
-	
-	// then Disable the next button
-	$('#next').add	
- 	}
+	//If current position is the last image 
+	if (currentPosition === images.length - 1){
+		// then Disable the next button
+		$('#next').prop('disabled', true);
+	}
+	$('#prev').prop('disabled', false);
+
 	// Change the src of #image-to-vote-on to current image at that index
-
-
+	$('#image-to-vote-on').attr('src', images[currentPosition])
 });
 
-// user clicks on the previous button
+// User clicks on the previous button
+$('#prev').on('click', function () {
+	
+	//find the currentPosition value saved from clicking #next   
+	currentPosition = currentPosition - 1;
+	
+	// if current position is the first image
+	// Dont forget to wrap the if statement in {}
+	if (currentPosition === 0){    //problem I had was writting = instead of === which diclares currentPosition IS 0
+		// then dsiable the #prev button
+		$('#prev').prop('disabled', true);
+		$('#next').prop('disabled', false);
+	}
 
+	// Change the src of #image-to-vote-on to current image at that index
+	$('#image-to-vote-on').attr('src', images[currentPosition])
+});
 
-// user clicks on the downvote button 
+// Still need to figure out how to store upvote/downvote #'s' per image. not sure how to set up both click function and have numbers stored per image index
 
+// User clicks on the downvote button 
+$('#downvote').on('click', function () {
+	// subtract one to the var currentVote
+	currentVote = currentVote - 1;
+	// display the currentVote 
+	$('#votes').html('Likes: ' + currentVote);
+});
 
-//user clicks on the upvote button
+//User clicks on the upvote button
+$('#upvote').on('click', function () {
+	// add one to the var currentVote
+	currentVote = currentVote + 1;
+	// display the currentVote
+	$('#votes').html('Likes: ' + currentVote);
+});
