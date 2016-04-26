@@ -1,13 +1,16 @@
+
+// GLOBAL VARIABLES-------------
+
 // Create an array of image paths
 var images = ["images/image_1.jpg", "images/image_2.jpg", "images/image_3.jpg", "images/image_4.jpg", "images/image_5.jpg", "images/image_6.jpg"];
 
+//Create an array for for votes
+var votes = [0, 0, 0, 0, 0, 0,]; 
+
 // Set a var for our currentPosition
 var currentPosition = 0;
-// Set a var for our currentVote. Thought about just using var currentPositon but added a unique var for organizational purposes
-var currentVote = 0;
-// Convert currentVote into a number
-currentVote = parseFloat(currentVote);
 
+// EVENTS------------------------
 
 // User clicks "next" button
 $('#next').on('click', function () {
@@ -44,20 +47,19 @@ $('#prev').on('click', function () {
 	$('#image-to-vote-on').attr('src', images[currentPosition])
 });
 
-// Still need to figure out how to store upvote/downvote #'s' per image. not sure how to set up both click function and have numbers stored per image index
 
 // User clicks on the downvote button 
 $('#downvote').on('click', function () {
 	// subtract one to the var currentVote
-	currentVote = currentVote - 1;
+	currentPosition = currentPosition - 1;
 	// display the currentVote 
-	$('#votes').html('Likes: ' + currentVote);
+	$('#votes').html('Likes: ' + votes[currentPosition])
 });
 
 //User clicks on the upvote button
 $('#upvote').on('click', function () {
 	// add one to the var currentVote
-	currentVote = currentVote + 1;
+	currentPosition = currentPosition + 1;
 	// display the currentVote
-	$('#votes').html('Likes: ' + currentVote);
+	$('#votes').html('Likes: ' + votes[currentPosition])
 });
